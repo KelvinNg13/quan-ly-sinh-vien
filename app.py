@@ -4,16 +4,16 @@ import matplotlib.pyplot as plt
 
 du_lieu={
     "Họ Tên":["Nguyễn Ngọc Thế Vinh","Nguyễn Minh Sơn","Phan Nhật Thành","Lê Phan Quốc Thiện","Phan Minh Nhật",
-              "Hoàng Văn Sơn","Nguyễn Văn Đại Dương","Lê Văn Thắng","Võ Thị Sao Mai","Nguyễn Huyền Linh","Nguyễn Trần Gia An"],
-    "Chuyên Cần":[10,8,8,9,5,2,8,1,8,9,5],
-    "Giữa Kỳ":[10,5,5,9,3,5,7,6,8,9,5],
-    "Cuối Kỳ":[9,8,5,7,7,8,4,8,9,8,5],
+              "Nguyễn Văn Đại Dương","Lê Văn Thắng","Võ Thị Sao Mai","Nguyễn Huyền Linh","Nguyễn Trần Gia An"],
+    "Chuyên Cần":[10,8,8,2,2,8,1,8,9,9],
+    "Giữa Kỳ":[10,5,5,1,3,7,6,8,9,8],
+    "Cuối Kỳ":[9,8,5,4,8,4,8,9,8,10],
 }
 df=pd.DataFrame(du_lieu)
 
 df["Điểm Tổng Kết"]=0.2 * df["Chuyên Cần"]+ 0.3 * df["Giữa Kỳ"]+ 0.5 * df["Cuối Kỳ"]
 
-df["Xếp Loại"]=""                                                                                      
+df["Xếp Loại"]=""                                                                                     
 for i,diem in enumerate(df["Điểm Tổng Kết"]):
   if diem >=8.5:
     df.loc[i,"Xếp Loại"]="Giỏi"
