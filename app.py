@@ -29,7 +29,7 @@ st.set_page_config(
     layout="wide"
 )
 st.title("WEBSITE QUẢN LÝ SINH VIÊN")
-st.write("quản lý thông tin và điểm số sinh viên")
+st.write("Quản lý thông tin và điểm số sinh viên")
 st.subheader("Bảng điểm sinh viên")
 st.dataframe(df, use_container_width=True)
 
